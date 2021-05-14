@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package="./;hello";
+package hello;
+
+message Hello {
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string addr = 3;
+}
