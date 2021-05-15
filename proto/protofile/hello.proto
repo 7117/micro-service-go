@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package="./;hello";
+package hello;
+
+message Hello {
+    optional string name = 1;
+    int32 age = 2;
+    string addr = 3;
+}
+
+enum EnumAllowingAlias {
+  option allow_alias = true;
+  UNKNOWN = 0;
+  STARTED = 1;
+  RUNNING = 1;
+}
+
+
+// $ protoc --go_out=. hello.proto  --experimental_allow_proto3_optional
