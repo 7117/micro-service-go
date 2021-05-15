@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "./;hello";
+package hello;
+
+
+service TestService {
+
+    rpc SayHi (HiRequest) returns (HiResponse){};
+
+}
+
+message HiRequest {
+    string name = 1;
+}
+
+message HiResponse {
+    string ret = 1;
+}
+
+// protoc --go_out=. say_hi.proto  --experimental_allow_proto3_optional
+// protoc --go_out=plugins=grpc:. say_hi.proto
