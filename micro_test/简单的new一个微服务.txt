@@ -1,0 +1,5 @@
+//go.micro是命名空间
+//web是type
+//alias后面紧跟是别名
+//fqdn   全限定域名   就是全称  全部自己定义
+web.Name("go.micro.web.micro_web_test"),
