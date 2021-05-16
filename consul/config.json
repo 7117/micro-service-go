@@ -1,0 +1,18 @@
+{
+  "service": {
+    "id": "consul-service-demo",
+    "name": "consul-service-demo",
+    "address": "127.0.0.1",
+    "port": 8088,
+    "tags": [
+      "uth",
+      "report"
+    ],
+    "checks": [
+      {
+        "http": "http://127.0.01:8080/health",
+        "interval": "10s"
+      }
+    ]
+  }
+}
